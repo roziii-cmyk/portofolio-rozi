@@ -1,0 +1,527 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Mencegah halaman bisa digeser ke kanan-kiri di HP */
+}
+
+/* NAVBAR */
+.navbar {
+    height: 52px;
+    background-color: #ad7cf0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #e8d7ff;
+}
+
+/* HOME SECTION (DESKTOP) */
+.home {
+    min-height: calc(100vh - 52px); /* Menggunakan min-height agar konten tidak terpotong jika panjang */
+    display: flex;
+}
+
+.foto {
+    width: 40%; /* DIUBAH: Disesuaikan agar total dengan .intro pas 100% */
+    background-color: #9254c1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.foto img {
+    width: 300px;
+    height: 300px;
+    max-width: 100%; /* DITAMBAH: Supaya gambar mengecil otomatis di layar tanggung */
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+}
+
+.intro {
+    width: 60%; /* DIUBAH: Dari 70% ke 60% agar pas pasangannya dengan .foto (40%) */
+    background-color: #4d0088;
+    color: white;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro h1 {
+    font-size: 64px; /* DIUBAH: Sedikit diperkecil agar tidak meluber di laptop kecil */
+    line-height: 1.05;
+    margin-bottom: 40px;
+}
+
+.intro p {
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ABOUT SECTION */
+.about {
+    min-height: calc(100vh - 52px);
+    padding: 55px 10%;
+    text-align: center;
+    background-color: #fefdff;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    background-color: #471f7f;
+    color: white;
+    padding: 5px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.about h3 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.kebiasaan-list {
+    width: 300px;
+    max-width: 100%; /* DITAMBAH: Mencegah list keluar layar di HP jadul */
+    margin: 0 auto;
+    text-align: left;
+    line-height: 2;
+    font-size: 18px;
+}
+
+/* GALLERY (DESKTOP) */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* DITAMBAH: Supaya gambar turun ke bawah kalau layar sempit */
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.gallery img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contact-form label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    width: 100%; /* DITAMBAH: Menjamin input tidak meluber */
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button,
+.project-button button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #471f7f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover,
+.project-button button:hover {
+    background-color: #6b32a8;
+}
+
+/* EXPERIENCE SECTION */
+.experience {
+    min-height: calc(100vh - 52px);
+    padding: 55px 10%;
+    text-align: center;
+    background-color: white;
+}
+
+.experience h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    background-color: #471f7f;
+    color: white;
+    padding: 5px;
+}
+
+.experience p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* TABLE RESPONSIVE */
+table {
+    width: 100%; /* DIUBAH: Menggunakan 100% container */
+    max-width: 900px;
+    margin: 50px auto;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc; /* DIUBAH: Agar terlihat jika background putih */
+    padding: 15px;
+}
+
+table th {
+    background-color: #471f7f;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #e8d7ff;
+}
+
+.project-button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-button button {
+    margin-top: 0;
+}
+
+
+/* =======================================================
+MEDIA QUERY: PERBAIKAN TOTAL UNTUK LAYAR HP & TABLET
+   ======================================================= */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+    .home {
+        flex-direction: column; /* Membuat susunan vertikal (Foto di atas, Intro di bawah) */
+        height: auto;
+    }
+
+    .foto {
+        width: 100%;
+        height: auto; /* DIUBAH: Mengikuti tinggi gambar asli */
+        padding: 40px 20px;
+    }
+
+    .foto img {
+        width: 200px; /* DIUBAH: Perkecil ukuran foto bulat di HP agar proporsional */
+        height: 200px;
+    }
+
+    .intro {
+        width: 100%;
+        padding: 40px 20px; /* DIUBAH: Padding dikurangi agar teks tidak terlalu sempit */
+        text-align: center; /* Elemen teks diposisikan di tengah agar rapi */
+    }
+
+    .intro h1 {
+        font-size: 38px; /* DIUBAH: Diperkecil drastis agar pas di layar HP */
+        margin-right: 0; /* Reset margin desktop */
+    }
+
+    .intro p {
+        margin: 0 auto; /* Menengahkan teks paragraf */
+    }
+
+    /* Perbaikan bagian About Me di HP */
+    .about {
+        padding: 40px 20px;
+    }
+
+    .about h2, .experience h2 {
+        font-size: 28px; /* Ukuran heading yang lebih masuk akal untuk HP */
+    }
+
+    .gallery {
+        gap: 10px; /* Merapatkan jarak gambar galeri di HP */
+    }
+
+    .gallery img {
+        width: 90px; /* DIUBAH: Mengecilkan ukuran foto galeri di HP agar muat berjejer */
+        height: 90px;
+    }
+
+    /* Perbaikan Tabel di HP */
+    table {
+        font-size: 12px;
+        display: block; /* Mengizinkan scroll horizontal khusus pada tabel */
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    table th,
+    table td {
+        padding: 10px 8px;
+    }
+
+    .project-button {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .project-button button {
+        width: 100%; /* Tombol memenuhi lebar layar di HP */
+    }
+}
+
+.project-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4d0088;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.home {
+    min-height: calc(100vh - 52px);
+    height: auto;
+    display: flex;
+    align-items: stretch;
+}
+
+.foto {
+    width: 44%;
+    overflow: hidden;
+}
+
+.foto img {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    display: block;
+}
+
+.intro {
+    width: 56%;
+    padding: 60px;
+    background-color: #4d0088;
+    color: white;
+}
+
+
+/* =========================
+BAGIAN KONTAK
+   ========================= */
+
+.contact {
+    margin-top: 45px;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* Daftar tautan kontak */
+
+.contact-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+
+/* Setiap kartu kontak */
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px;
+
+    color: white;
+    text-decoration: none;
+
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 10px;
+
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+/* Ikon sederhana */
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ad7cf0;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Teks di dalam kartu */
+
+.contact-item strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.contact-item small {
+    display: block;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #e5d5f5;
+    overflow-wrap: anywhere;
+}
+
+
+/* Efek saat mouse diarahkan */
+
+.contact-item:hover {
+    background-color: rgba(255, 255, 255, 0.22);
+    transform: translateY(-3px);
+}
+
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #2f0055;
+    color: white;
+    font-size: 13px;
+}
+
+.footer2 {
+    padding: 20px;
+    text-align: center;
+    background-color: #2f0055;
+    color: white;
+    font-size: 13px;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .home {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .foto {
+        width: 100%;
+        height: 400px;
+    }
+
+    .intro {
+        width: 100%;
+        padding: 35px 25px;
+    }
+
+    .intro h1 {
+        font-size: 48px;
+    }
+
+    .contact-links {
+        grid-template-columns: 1fr;
+    }
+
+    .contact h2 {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    .intro {
+        padding: 30px 18px;
+    }
+
+    .intro h1 {
+        font-size: 42px;
+    }
+
+    .contact-item {
+        padding: 12px;
+    }
+
+}
